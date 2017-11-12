@@ -9,7 +9,6 @@
 
 #include "itkPoint.h"
 #include "itkImage.h"
-#include "itkOrientedImage.h"
 #include "itkImageFileReader.h"
 #include "itkImageSeriesReader.h"
 #include "itkImageFileWriter.h"
@@ -40,10 +39,10 @@
 
 #include "TissueClassificationCLP.h"
 
-typedef itk::OrientedImage<float, 3> ImageType;
+typedef itk::Image<float, 3> ImageType;
 typedef itk::ImageFileReader< ImageType  > ImageReaderType;
 
-typedef itk::OrientedImage<unsigned char, 3> LabelImageType;
+typedef itk::Image<unsigned char, 3> LabelImageType;
 
 LabelImageType::Pointer BinaryErodeFilter3D ( LabelImageType::Pointer & img , unsigned int ballsize )
 {
