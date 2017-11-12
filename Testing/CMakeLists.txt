@@ -11,7 +11,7 @@ include(${Slicer3_USE_FILE})
 find_package(GenerateCLP REQUIRED)
 if(GenerateCLP_FOUND)
   include(${GenerateCLP_USE_FILE})
-endif(GenerateCLP_FOUND)
+endif()
 
 include_directories(${TissueClassification_SOURCE_DIR})
 include_directories(${TissueClassification_BINARY_DIR}/Testing)

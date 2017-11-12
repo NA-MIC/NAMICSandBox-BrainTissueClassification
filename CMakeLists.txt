@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.4)
 
 if(COMMAND cmake_policy)
   cmake_policy(SET CMP0003 NEW)
-endif(COMMAND cmake_policy)
+endif()
 
 include_directories( ${SlicerBaseCLI_BINARY_DIR} ${SlicerBaseCLI_SOURCE_DIR} )
 
@@ -34,11 +34,11 @@ if (Slicer3_FOUND)
 
   add_subdirectory(Testing)
 
-else (Slicer3_FOUND)
+else ()
 
 message(WARNING "Cannot build with a Slicer3 build tree or a Slicer3 installation. Please set Slicer3_DIR. If using a Slicer3 build, Slicer3_DIR needs to be set to the root of the build tree of Slicer3.  If using an installation of Slicer3, Slicer3_DIR needs to be set to <SlicerInstallation>/lib/Slicer3.")
 
-endif (Slicer3_FOUND)
+endif ()
 
 ################################################
 
